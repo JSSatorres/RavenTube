@@ -9,7 +9,11 @@ module.exports = {
         primary: '#170B33',
         // azul oscuro
         secondary: '#170B33',
+        // ravenloop blue
+        rblue: '#00A1E0',
         // blanco texto
+        darkcontrast: '#0C37ED',
+        greencontrast: '#0CEDB2',
         contrast1: '#FFFFFF',
         // negro texto
         contrast2: '#000000',
@@ -19,6 +23,8 @@ module.exports = {
         activetext: '#E5BE01',
         // azul fondo menu movil
         'deep-blue': '#000026',
+        // bg grey
+        softGrey: '#1E1E1E',
 
       },
       fontSize: {
