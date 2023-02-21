@@ -1,10 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
+import Nav from '../components/Nav'
+import VideoList from '../components/VideoList'
 
 const Home = () => (
   <>
     <Header />
-    <p>sdsad</p>
+    <div className='flex'>
+      <Nav />
+      <VideoList />
+    </div>
+
   </>
 )
 
