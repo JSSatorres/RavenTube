@@ -11,7 +11,10 @@ module.exports = {
         secondary: '#170B33',
         // ravenloop blue
         rblue: '#00A1E0',
+        rbluedark: '#263AD3',
+        customdark: '#000000',
         // blanco texto
+        greydark: '#101010',
         darkcontrast: '#0C37ED',
         greencontrast: '#0CEDB2',
         contrast1: '#FFFFFF',
