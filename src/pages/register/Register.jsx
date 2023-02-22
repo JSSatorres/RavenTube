@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Formik } from 'formik';
 import { Link, useNavigate } from 'react-router-dom'
-import { login } from '../../config/firebase'
+import { register } from '../../config/firebase'
 import registerSchema from './registerSchema'
 import logoRavenLoop from '../../assets/image/logoRavenLoop.png'
 
@@ -13,7 +13,7 @@ const Register = () => {
 
   const submitForm = async ({ email, password }) => {
     try {
-      await login(email, password);
+      await register(email, password);
       navigate('/home')
       toast.success('Register completed successfully!')
     } catch (error) {

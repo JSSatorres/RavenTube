@@ -2,19 +2,28 @@
 import React from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Formik } from 'formik';
+import { Formik } from 'formik'
 import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
 import { login } from '../../config/firebase'
 import loginSchema from './loginSchema'
 import logoRavenLoop from '../../assets/image/logoRavenLoop.png'
+import { setCeoAuthorization } from '../../store/slices/authSlice'
 
 const Login = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const CEO_LOGIN = import.meta.env.VITE_CEO_LOGIN;
 
   const submitForm = async ({ email, password }) => {
     try {
       await login(email, password);
       navigate('/home')
+      if (email === CEO_LOGIN) {
+        toast.warn('You are logged as Admin!')
+        dispatch(setCeoAuthorization(true))
+        return
+      }
       toast.success('Action completed successfully!')
     } catch (error) {
       toast.error('Login failled!')
