@@ -7,7 +7,7 @@ const initialState = {
     token: '',
   },
   isAuthenticated: false,
-  error: null,
+  isCeoAuthenticated: true,
 }
 
 export const authSlice = createSlice({
@@ -20,43 +20,17 @@ export const authSlice = createSlice({
     setAuthorization: (state, action) => {
       state.isAuthenticated = action.payload;
     },
-    setLoading: (state, action) => {
-      state.loading = action.payload;
+    setCeoAuthorization: (state, action) => {
+      state.isCeoAuthenticated = action.payload;
     },
-    setError: (state, action) => {
-      state.error = action.payload;
-    },
-    login: (state, action) => {
-      state.loading = true;
-      state.error = null;
-    },
-    loginSuccess: (state, action) => {
-      state.user = action.payload;
-      state.loading = false;
-      state.error = null;
-    },
-    loginFailed: (state, action) => {
-      state.loading = false;
-      state.error = action.payload;
-    },
-    logout: (state) => {
-      state.user = {
-        email: '',
-        token: '',
-      };
-    },
+
   },
 })
 
 export const {
   setUser,
   setAuthorization,
-  setLoading,
-  setError,
-  login,
-  loginSuccess,
-  loginFailed,
-  logout,
+  setCeoAuthorization,
 } = authSlice.actions
 
 export default authSlice.reducer

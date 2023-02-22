@@ -2,9 +2,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  searchInfo: '',
+  search: '',
+  type: '',
   error: null,
-  loading: false,
+  allVideos: [],
 }
 
 export const videosSlice = createSlice({
@@ -12,43 +13,30 @@ export const videosSlice = createSlice({
   initialState,
   reducers: {
     setVideosQuery: (state, action) => {
-      state.user = action.payload;
-    },
-    // setAuthorization: (state, action) => {
-    //   state.isAuthenticated = action.payload;
-    // },
-    setVideosLoading: (state, action) => {
-      state.loading = action.payload;
+      state.search = action.payload.search;
+      state.canal = action.payload.canal;
     },
     setVideosError: (state, action) => {
       state.error = action.payload;
     },
-    // login: (state, action) => {
-    //   state.loading = true;
-    //   state.error = null;
-    // },
-    // loginSuccess: (state, action) => {
-    //   state.user = action.payload;
-    //   state.loading = false;
-    //   state.error = null;
-    // },
-    // loginFailed: (state, action) => {
-    //   state.loading = false;
-    //   state.error = action.payload;
-    // },
-    // logout: (state) => {
-    //   state.user = {
-    //     email: '',
-    //     token: '',
-    //   };
-    // },
+    setAllVideos: (state, action) => {
+      state.allVideos = action.payload;
+    },
+    setVideoType: (state, action) => {
+      state.type = action.payload;
+    },
+    resetVideoType: (state) => {
+      state.search = '';
+    },
   },
 })
 
 export const {
   setVideosQuery,
-  setVideosLoading,
   setVideosError,
+  setAllVideos,
+  setVideoType,
+  resetVideoType,
 } = videosSlice.actions
 
 export default videosSlice.reducer
