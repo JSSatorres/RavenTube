@@ -1,3 +1,8 @@
+// podria haber implementado mas metodos como recuperar contraseña
+// o registrarse por google pero por falta de tiempo he pensado que
+// aporta mas valor a la prueba otras utilidades que implemnar
+// mas opciones de firebase quedando demostrado su uso
+
 import { initializeApp } from 'firebase/app';
 import {
   createUserWithEmailAndPassword,
@@ -15,7 +20,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASEREMENT_ID,
 };
-
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
