@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination = ({
+  currentPage, onPageChange, totalItems, itemsPerPage,
+}) => {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
     <div className='flex flex-row justify-center  bg-greydark py-5'>
       <nav>
         <ul className='pagination flex flex-row gap-x-2'>
-          <li className={`${currentPage === 1 ? 'hidden' : ''}`}>
+          <li>
             <button
               className='custom-pagination-button'
               onClick={() => onPageChange(currentPage - 1)}
@@ -17,7 +20,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               Previous
             </button>
           </li>
-
           {pageNumbers.map((number) => (
             <li key={number} className={`${currentPage === number ? 'active' : ''}`}>
               <button
@@ -29,8 +31,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               </button>
             </li>
           ))}
-
-          <li className={`${currentPage === totalPages ? 'hidden' : ''}`}>
+          <li>
             <button
               className='custom-pagination-button'
               onClick={() => onPageChange(currentPage + 1)}
