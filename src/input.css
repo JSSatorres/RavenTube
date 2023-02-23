@@ -18,6 +18,9 @@ body,
   .main-container {
     @apply py-2 px-4 bg-slate-100 text-white font-semibold rounded-lg shadow-md focus:ring-opacity-75;    
   }
+  .container-empty {
+    @apply max-h-full w-full flex items-center justify-center text-4xl;    
+  }
   .custom-input {
     @apply inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow;
   }
@@ -26,6 +29,9 @@ body,
   }
   .custom-pagination-button {
     @apply px-3 py-1 rounded-md bg-customdark text-white hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-300 disabled:opacity-50;
+  }
+  .custom-border {
+    @apply border-b border-[#303030]
   }
 }
 
