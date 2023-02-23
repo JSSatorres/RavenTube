@@ -51,7 +51,7 @@ const categories = [
     name: 'Settings',
     icon: <FiSettings />,
     action: false,
-    direction: '/settings',
+    direction: '/home/profile',
   },
   {
     name: 'Log out',
