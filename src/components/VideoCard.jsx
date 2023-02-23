@@ -3,7 +3,6 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
-import { login } from '../config/firebase'
 
 const VideoCard = ({ video }) => {
   const isCeoAuthenticated = useSelector((state) => state.auth.isCeoAuthenticated)

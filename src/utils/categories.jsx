@@ -14,7 +14,7 @@ const categories = [
     icon: <AiFillHome />,
     action: 'changeType',
     type: '',
-    // direction: '/home',
+    direction: '/home',
   },
   {
     name: 'Music',

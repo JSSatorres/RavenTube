@@ -66,7 +66,7 @@ const UserSetting = () => {
                   name='userName'
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.userName}
                   placeholder='User name'
                 />
                 {errors.userName && touched.userName && errors.userName
