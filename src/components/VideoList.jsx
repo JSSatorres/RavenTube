@@ -9,6 +9,7 @@ const VideoList = () => {
   const [videoToShow, setVideoToShow] = useState([])
   const [items, setItems] = useState([]);
   const search = useSelector((state) => state.videos.search)
+  const type = useSelector((state) => state.videos.type)
   const videosType = useSelector((state) => state.videos.type)
 
   const {
@@ -17,6 +18,7 @@ const VideoList = () => {
 
   useEffect(() => {
     setVideoToShow(data)
+    setItems(data)
   }, [data]);
 
   useEffect(() => {
@@ -41,10 +43,30 @@ const VideoList = () => {
   }
 
   return (
-    <div className='w-full h-full bg-greydark pt-2 py-20'>
+    <div className='w-full bg-greydark pt-2 py-20'>
+      <div className={`${videoToShow?.length === 0 ? 'hidden' : ''}`}>
+        <Pagination
+          currentPage={currentPage}
+          onPageChange={onPageChange}
+          totalItems={videoToShow?.length}
+          itemsPerPage={12}
+        />
+      </div>
       {isLoading && isFetching && <div className='container-empty'> ...loading</div>}
-      {isSuccess && videoToShow?.length === 0 && <div className='container-empty'> Not matches, try again</div>}
-      <div className='h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5'>
+      {isSuccess && videoToShow?.length === 0 && (
+      <div className='container-empty flex flex-col mt-28 py-6 h-[550px]'>
+        Not matches for the search:
+        <span className='font-bold my-3 text-5xl'>
+          {` ${search}` }
+        </span>
+        in section:
+        <span className='font-bold my-3 text-5xl'>
+          {` ${type === '' ? 'all categories' : type} ` }
+        </span>
+        try again
+      </div>
+      )}
+      <div className={`${videoToShow?.length === 0 ? 'hidden' : ' '} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5  bg-greydark`}>
         {isSuccess && items?.map((item) => (
           <VideoCard
             key={item?.id}
@@ -52,12 +74,7 @@ const VideoList = () => {
           />
         ))}
       </div>
-      <Pagination
-        currentPage={currentPage}
-        onPageChange={onPageChange}
-        totalItems={videoToShow?.length}
-        itemsPerPage={12}
-      />
+
     </div>
 
   )

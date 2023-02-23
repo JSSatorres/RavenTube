@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { toast } from 'react-toastify';
 import { FiMenu } from 'react-icons/fi';
@@ -12,7 +12,7 @@ const Nav = () => {
   const [selectedCategory, setSelectedCategory] = useState('Home')
   const [isDesktop, setIsMobile] = useState(window.innerWidth > 768);
   const [showMenu, setShowMenu] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch()
 
   const changeType = (itemName) => {
@@ -27,7 +27,7 @@ const Nav = () => {
     }
     if (item.action) item.action()
     if (item.name === 'Log out') toast.success('Log out completed successfully!')
-    // if (item.direction) navigate(`${item.direction}`)
+    if (item.direction) navigate(`${item.direction}`)
   }
 
   useEffect(() => {
