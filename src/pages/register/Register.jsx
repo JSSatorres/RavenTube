@@ -62,7 +62,7 @@ const Register = () => {
                   : null}
               </div>
               <div className='mt-4'>
-                <label className='mb-2.5 block font-bold' htmlFor='email'>Password</label>
+                <label className='mb-2.5 block font-bold' htmlFor='password'>Password</label>
                 <input
                   type='password'
                   name='password'
