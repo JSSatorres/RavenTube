@@ -7,7 +7,7 @@ const initialState = {
     token: '',
   },
   isAuthenticated: false,
-  isCeoAuthenticated: true,
+  isCeoAuthenticated: false,
 }
 
 export const authSlice = createSlice({

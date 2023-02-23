@@ -1,16 +1,16 @@
 {
   "videos": [
-       {
-      "id":1,
-      "title":"French food",
-      "author":"https://i.pinimg.com/236x/77/05/3a/77053a84791f64607074e565fbacbe9f.jpg",
-      "description":"french cook is not special",
-      "thumbnails":"https://elviajerofeliz.com/wp-content/uploads/2019/11/Comida-t%C3%ADpica-de-India-_-10-Platos-Imprescindibles.jpg",
-      "type":"cooking",
-      "durations":"3:18",
-      "channel":"cookChannel",
-      "url":"https://www.youtube.com/watch?v=XHVNym5rO68"
-    },  
+    {
+      "id": 1,
+      "title": "French food",
+      "author": "https://i.pinimg.com/236x/77/05/3a/77053a84791f64607074e565fbacbe9f.jpg",
+      "description": "french cook is not special",
+      "thumbnails": "https://elviajerofeliz.com/wp-content/uploads/2019/11/Comida-t%C3%ADpica-de-India-_-10-Platos-Imprescindibles.jpg",
+      "type": "cooking",
+      "durations": "3:18",
+      "channel": "cookChannel",
+      "url": "https://www.youtube.com/watch?v=XHVNym5rO68"
+    },
     {
       "id": 2,
       "title": "Old school games",
@@ -53,17 +53,6 @@
       "type": "music",
       "durations": "8:18",
       "channel": "musicky",
-      "url": "https://www.youtube.com/watch?v=XHVNym5rO68"
-    },
-    {
-      "id": 6,
-      "title": "Fight at the movies",
-      "author": "https://static.vecteezy.com/system/resources/previews/004/219/646/non_2x/woman-profile-silhouette-free-vector.jpg",
-      "description": "The best fight at the movies in the 80s",
-      "thumbnails": "https://i2-prod.mirror.co.uk/incoming/article11193980.ece/ALTERNATES/s1168v/FIGHT.jpg",
-      "type": "news",
-      "durations": "2:28",
-      "channel": "shadow",
       "url": "https://www.youtube.com/watch?v=XHVNym5rO68"
     },
     {
