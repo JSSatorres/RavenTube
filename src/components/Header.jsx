@@ -7,7 +7,6 @@ import { setVideosQuery, resetVideoType } from '../store/slices/videosSlice'
 const Header = () => {
   const [querySearch, setQuerySearch] = useState('')
   const dispatch = useDispatch();
-  // const search = useSelector((state) => state.videos.search);
 
   const searchQueryHandler = (e) => {
     e.preventDefault()
