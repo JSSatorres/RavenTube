@@ -10,6 +10,7 @@ const PaginationUp = ({
     <div className='flex flex-row justify-center  bg-greydark py-5'>
       <nav>
         <ul className='pagination flex flex-row gap-x-2'>
+          <li> pagination up</li>
           <li>
             <button
               className='custom-pagination-button'
