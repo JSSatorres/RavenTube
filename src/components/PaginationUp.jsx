@@ -40,6 +40,14 @@ const PaginationUp = ({
             >
               Next
             </button>
+            <button
+              className='custom-pagination-button'
+              onClick={() => onPageChange(currentPage + 2)}
+              disabled={currentPage === totalPages}
+              type='button'
+            >
+              Next + 2
+            </button>
           </li>
         </ul>
       </nav>
